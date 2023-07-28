@@ -15,7 +15,7 @@ The following MicroPython firware modifications have been made:
   - Enabled 158K of Flash File Storage in Sectors 1-6 to allow larger code files.
   - Note:  The Fonts are not currently embedded in the Firmware.
 
-The ILI9341 and STMPE811QTR drivers are embedded in the firmware, please see the source code in the XXX directory. 
+The ILI9341 and STMPE811QTR drivers are embedded in the firmware, please see the Python source code in the /boards/STM32F429DISC/ directory. 
 
 The Firmware Images are based on the official released version, with the enhancements listed previously.
  
