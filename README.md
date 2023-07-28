@@ -17,6 +17,5 @@ The following MicroPython firware modifications have been made:
 
 The ILI9341 and STMPE811QTR drivers are embedded in the firmware, please see the source code in the XXX directory
 
-The Firmware Images use the following naming convention.
-
-  - 
+The Firmware Images are based on the official released version, with the enhancements listed previously.
+ 
