@@ -1,2 +1,22 @@
 # STM32F429I_DISC1
-Micropython for STM32 Discovery Board (LCD &amp; Touch Drivers, DAC Support, 158K Code Space)
+MicroPython for STM32 Discovery Board (LCD &amp; Touch Drivers, DAC Support, 158K Flash Code Space)
+
+=======================
+<p align="center">
+  <img src="https://raw.githubusercontent.com/micropython/micropython/master/logo/upython-with-micro.jpg" alt="MicroPython Logo"/>
+</p>
+
+The content in this repository is in support of EENG 163, a introductory course in Python, Micropython, and Embedded Systems at Eastern Washington University.
+
+The following MicroPython firware modifications have been made:
+  - ILI9341 Display support (Based on the code from rdagger:  https://github.com/rdagger/micropython-ili9341, and speed enhancements proposed by sumnerk)
+  - STMPE811QTR Touch Screen Driver  (IRQ is not currently supported)
+  - Enabled DAC Support (PA_4 or DAC1 is a shared pin for VSYNC and does not work properly.  PA_5 or DAC2 works as expected)
+  - Enabled 158K of Flash File Storage in Sectors 1-6 to allow larger code files.
+  - Note:  The Fonts are not currently included in the Firmware.
+
+The ILI9341 and STMPE811QTR drivers are embedded in the firmware, please see the source code in the XXX directory
+
+The Firmware Images use the following naming convention.
+
+  - 
