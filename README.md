@@ -1,5 +1,5 @@
 # STM32F429I_DISC1
-MicroPython for STM32 Discovery Board (LCD &amp; Touch Drivers, DAC Support, 158K Flash Code Space)
+MicroPython for STM32F4 Discovery Board (LCD &amp; Touch Drivers, DAC Support, 158K Flash Code Space)
 
 =======================
 <p align="center">
