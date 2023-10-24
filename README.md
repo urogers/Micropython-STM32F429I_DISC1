@@ -6,7 +6,7 @@ MicroPython for STM32F4 Discovery Board (LCD &amp; Touch Drivers, DAC Support, 1
   <img src="https://raw.githubusercontent.com/urogers/micropython-stm32f429i_disc1/master/logo/stm32f429disc.jpg" width=25% height=25% alt="Discovery Logo"/ >
 </p>
 
-The content in this repository is in support of EENG 163, a introductory course in Python, Micropython, and Embedded Systems at Eastern Washington University.
+The content in this repository is in support of EENG 163, an introductory course in Python, Micropython, and Embedded Systems at Eastern Washington University.
 
 The following MicroPython firware modifications have been made:
   - ILI9341 Display support (Based on the code from rdagger:  https://github.com/rdagger/micropython-ili9341, and speed enhancements proposed by sumnerk)
