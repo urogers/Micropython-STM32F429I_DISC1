@@ -13,7 +13,7 @@ The following MicroPython firware modifications have been made:
   - STMPE811QTR Touch Screen Driver  (IRQ is not currently supported)
   - Enabled DAC Support (PA_4 or DAC1 is a shared pin for VSYNC and does not work properly.  PA_5 or DAC2 works as expected)
   - Enabled 158K of Flash File Storage in Sectors 1-6 to allow larger code files.
-  - Note:  The Fonts are not currently embedded in the Firmware.
+  - Version v.1.23.0_163 of the Firmware now supports firmware embedded fonts.
 
 The ILI9341 and STMPE811QTR drivers are embedded in the firmware, please see the Python source code in the /boards/STM32F429DISC/ directory. 
 
