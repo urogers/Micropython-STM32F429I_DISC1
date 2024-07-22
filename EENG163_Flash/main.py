@@ -2,9 +2,17 @@
 
 from touch811 import Touch811
 from lcd9341 import LCD9341, color565
-from xglcd_font import XglcdFont
+from xfglcd_font import XglcdFont
 from machine import Pin, SoftI2C, SPI
 from time import sleep
+#[JAS] "frozen" fonts
+from ArcadePix9x11_Froze import ArcadePix9x11
+from Bally7x9_Froze import Bally7x9
+#from Broadway17x15_Froze import Broadway17x15
+#from EspressoDolce18x24_Froze import EspressoDolce18x24
+#from IBMPlexMono12x24_Froze import IBMPlexMono12x24
+from Robotron13x21_Froze import Robotron13x21
+from Unispace12x24_Froze import Unispace12x24
 
 #ST32 DISCO1 LCD Port
 LCD_SPI_BUS = 5
@@ -39,16 +47,32 @@ lcd.draw_text8x8(5, 130, 'Touch The Screen', color565(0, 255, 0))
 lcd.draw_text8x8(8, 140, 'Multiple Times', color565(0, 255, 0))
 
 print('Loading arcadepix')
-arcadepix = XglcdFont('fonts/ArcadePix9x11.c', 9, 11)
+arcadepix = ArcadePix9x11()
 lcd.draw_text(50, 0, 'Arcade Pix 9x11', arcadepix, color565(255, 0, 0))
                       
 print('Loading Bally')
-bally = XglcdFont('fonts/Bally7x9.c', 7, 9)
+bally = Bally7x9()
 lcd.draw_text(30, 50, 'bally 7x9 or 5x8', bally,
                       color565(255, 0, 0))
 
+#print('Loading Broadway')
+#broadway = Broadway17x15()
+#lcd.draw_text(10, 70, 'Broadway 17x15', broadway, color565(0,0,255))
+
+#print('Loading EspressoDolce')
+#espresso = EspressoDolce18x24()
+#lcd.draw_text(10, 70, 'EspressoDolce 18x24', espresso, color565(0,0,255))
+
+#print('Loading IBMPlexMono')
+#ibmplex = IBMPlexMono12x24()
+#lcd.draw_text(10, 70, 'IBMPlexMono 12x24', ibmplex, color565(0,0,255))
+
+print('Loading Robotron')
+robotron = Robotron13x21()
+lcd.draw_text(10, 70, 'ROBOTRON 12X24', robotron, color565(0,0,255))
+
 print('Loading Unispace12x24')
-unispace = XglcdFont('fonts/Unispace12x24.c', 12, 24)
+unispace = Unispace12x24()
 lcd.draw_text(50, 220, 'Unispace 12x24', unispace,
                       color565(255, 255, 255))
 
