@@ -2,10 +2,12 @@
 
 from touch811 import Touch811
 from lcd9341 import LCD9341, color565
-from xfglcd_font import XglcdFont
+#[JAS] Font engine changed from firmware v1.20.0_163 to v1.23.0_163, use only one!
+from xfglcd_font import XglcdFont # for firmware v1.23.0.163, supports "frozen" fonts
+#from xglcd_font import XglcdFont # for firmware v1.20.0.163
 from machine import Pin, SoftI2C, SPI
 from time import sleep
-#[JAS] "frozen" fonts
+#[JAS] "frozen" fonts (not present in firmware v1.20.0_163)
 from ArcadePix9x11_Froze import ArcadePix9x11
 from Bally7x9_Froze import Bally7x9
 #from Broadway17x15_Froze import Broadway17x15
@@ -46,8 +48,10 @@ lcd.draw_circle(237, 317, 2, color565(0, 255, 255))
 lcd.draw_text8x8(5, 130, 'Touch The Screen', color565(0, 255, 0))
 lcd.draw_text8x8(8, 140, 'Multiple Times', color565(0, 255, 0))
 
+#[JAS] All fonts using firmware v1.23.0_163 "frozen" fonts by default, arcadepix will show an alternate method
 print('Loading arcadepix')
-arcadepix = ArcadePix9x11()
+arcadepix = ArcadePix9x11() # firmware v1.23.0_163 only
+#arcadepix = XglcdFont('fonts/ArcadePix9x11.c', 9, 11) # requires specified font file in fonts folder on drive
 lcd.draw_text(50, 0, 'Arcade Pix 9x11', arcadepix, color565(255, 0, 0))
                       
 print('Loading Bally')
